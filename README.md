@@ -2,7 +2,7 @@
 
 <img src="logo.png" alt="express hero" align="right" />
 
-A foundation for full stack Node app using Express, API REST, MongoDB, performance and security best practices, only relying on npm for continuous integration and deployment on Heroku.
+A API REST prototype in Node.js using Express and MongoDB, performance and security best practices, only relying on npm for continuous integration and deployment on Heroku.
 
 One-file configuration : *package.json* contains all the configuration needed for front, back, test, deployment phases. No bower, no Gulp/Grunt or other task runners, everything is done using npm.
 
