@@ -1,0 +1,17 @@
+extends ../layout
+
+block content
+  h1= title
+  form(action="/users", method="post")
+    input(type="hidden", name="_csrf", value=csrfToken)
+    input(type="text", id="firstname", name="firstname", placeholder="firstname", value=userForm?userForm.user.firstname:'', required)
+    input(type="text", id="lastname", name="lastname", placeholder="lastname", value=userForm?userForm.user.lastname:'', required)
+    input(type="email", id="email", name="email", placeholder="email", value=userForm?userForm.user.email:'', required)
+    input(type="submit", value="create")
+
+  #errors
+    - if (userForm && userForm.errors){
+      each error in userForm.errors
+        span= error.message
+        br
+    - }

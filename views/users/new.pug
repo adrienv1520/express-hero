@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+  h1= title
+  form(action="/users", method="post", id="userForm")
+    input(type="hidden", name="_csrf", value=csrfToken)
+    input(type="text", id="pseudo", name="pseudo", placeholder="pseudo", value="", required)
+    input(type="email", id="email", name="email", placeholder="email", value="", required)
+    input(type="password", id="password", name="password", placeholder="password", value="", required)
+    input(type="file", id="avatar", name="avatar", placeholder="avatar", value="")
+    input(type="submit", value="join")

@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= message
+  h2= error.status
+  #error
+    pre #{error.stack}
+    p.monster
+      img(src="img/monstereye404.png", alt="Monster Eye")
+      img(src="img/monsternoeye404.png", alt="Monster of 404")

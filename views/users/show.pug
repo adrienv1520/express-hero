@@ -1,0 +1,9 @@
+extends ../layout
+
+block content
+  h1= title
+  form(action="/users", method="get")
+    input(type="text", name="firstname", placeholder="firstname", disabled, value=user?user.firstname:'')
+    input(type="text", name="lastname", placeholder="lastname", disabled, value=user?user.lastname:'')
+    input(type="email", name="email", placeholder="email", disabled, value=user?user.email:'')
+    input(type="submit", value="close")

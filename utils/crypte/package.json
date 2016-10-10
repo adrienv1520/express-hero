@@ -1,0 +1,31 @@
+{
+  "name": "crypte",
+  "version": "0.1.0",
+  "description": "A node module and command line tool to provide cryptographic functionnality.",
+  "author": "Adrien Valcke <a.valcke@free.fr>",
+  "main": "./index.js",
+  "bin": {
+    "crypte": "bin/index.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AdVg/crypte.git"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "keywords": [
+    "cryptographic",
+    "crypto",
+    "password",
+    "cipher",
+    "aes",
+    "key"
+  ],
+  "preferGlobal": false,
+  "private": false,
+  "analyze": false,
+  "license": "MIT"
+}

@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  input(type="hidden", id="_csrf", name="_csrf", value="")
+  input(type="hidden", id="_csrf", name="_csrf", value="")
+  input(type="hidden", id="_csrf", name="_csrf", value="hello")
+  a(href="/users") users

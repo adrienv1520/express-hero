@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  - if (userForm) { user = userForm.user;}
+  h1= title
+  form(action="/users/" + user._id + "?_method=PUT", method="post")
+    input(type="hidden", name="_csrf", value=csrfToken)
+    input(type="text", id="firstname", name="firstname", placeholder="firstname", value=user?user.firstname:'')
+    input(type="text", id="lastname", name="lastname", placeholder="lastname", value=user?user.lastname:'')
+    input(type="email", id="email", name="email", placeholder="email", value=user?user.email:'')
+    input(type="submit", value="update")
+
+  #errors
+    - if (userForm && userForm.errors){
+      each error in userForm.errors
+        span= error.message
+        br
+    - }

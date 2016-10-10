@@ -1,0 +1,23 @@
+extends ../layout
+
+block content
+  h1= title
+  if users.length
+    ul
+      each user in users
+        li(style="display:flex;") #{user.firstname} #{user.lastname}
+          form(action="/users/" + user._id, method="get")
+            input(type="submit", value="show")
+          form(action="/users/" + user._id + "/edit", method="get")
+            input(type="submit", value="edit")
+          form(action="/users/" + user._id + "?_method=DELETE", method="post")
+            input(type="hidden", name="_csrf", value=csrfToken)
+            input(type="submit", value="delete")
+  else
+    p No user in database.
+
+  form(action="/users/new", method="get")
+    input(type="submit", value="create")
+
+  if back
+    a(href= back) back
